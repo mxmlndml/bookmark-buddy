@@ -3,7 +3,7 @@ import { readFile } from "fs/promises";
 import redirects from "./redirects";
 
 const host = "localhost";
-const port = 8000;
+const port = 8080;
 const faviconPaths = [
   "/apple-touch-icon-precomposed.png",
   "/apple-touch-icon.png",
