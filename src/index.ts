@@ -1,5 +1,6 @@
 import http, { IncomingMessage, ServerResponse } from "http";
 import { readFile } from "fs/promises";
+import { join } from "path";
 import redirects from "./redirects";
 
 const host = "localhost";
@@ -16,7 +17,7 @@ const requestListener = async (req: IncomingMessage, res: ServerResponse) => {
 
   // serve custom favicon
   if (faviconPaths.includes(url.pathname)) {
-    const favicon = await readFile(`favicons/${id}.png`);
+    const favicon = await readFile(join(__dirname, `favicons/${id}.png`));
     res.writeHead(200);
     res.end(favicon);
     return;
