@@ -1,0 +1,19 @@
+{
+  "name": "bookmark-buddy",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "tsc -w",
+    "build": "rimraf ./dist && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.2.2"
+  }
+}
