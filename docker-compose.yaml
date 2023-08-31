@@ -1,6 +1,0 @@
-services:
-  bookmark-buddy:
-    image: mxmlndml/bookmark-buddy:latest
-    restart: always
-    ports:
-      - 8080:10000
