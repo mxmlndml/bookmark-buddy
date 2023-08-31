@@ -2,5 +2,7 @@ services:
   bookmark-buddy:
     image: mxmlndml/bookmark-buddy:latest
     restart: always
+    environment:
+      - BASE_URL=bookmark-buddy.example.com
     ports:
       - 8080:10000
