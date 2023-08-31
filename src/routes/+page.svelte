@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Manage Bookmarks</h1>
+<ul>
+    <li>
+        <h2>Twitter</h2>
+        <img src="icons/twitter.png" alt="twitter logo" />
+    </li>
+
+    <li>
+        <h2>mxmlndml</h2>
+        <img src="icons/mxmlndml.png" alt="memoji" />
+    </li>
+</ul>
