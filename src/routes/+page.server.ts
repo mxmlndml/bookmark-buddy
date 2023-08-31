@@ -1,4 +1,4 @@
-import { BASE_URL } from "$env/static/private";
+import { env } from "$env/dynamic/private";
 import { redirect } from "@sveltejs/kit";
 import type { PageServerLoad } from "./$types";
 import json from "../redirects.json";
@@ -11,7 +11,7 @@ export const load: PageServerLoad = async ({ url }) => {
 
   // bookmark-buddy.example.com
   // -> navigate to admin page
-  if (url.hostname === BASE_URL) {
+  if (url.hostname === env.BASE_URL) {
     return {
       redirects,
     };
@@ -28,5 +28,5 @@ export const load: PageServerLoad = async ({ url }) => {
 
   // invalid service
   // -> navigate to admin page
-  throw redirect(302, BASE_URL);
+  throw redirect(302, env.BASE_URL ?? "");
 };
